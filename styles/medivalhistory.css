@@ -1,0 +1,168 @@
+
+
+
+#video{
+    padding-top: 10em;
+}
+
+section
+{
+    padding: 30px;
+}
+.row
+{
+position: relative;
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+h1{
+    text-align: center;
+    padding:10px;
+    color: black;
+}
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.align-items{
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    min-height:100vh;
+    background: #222;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+.container .card
+{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 15px;
+     overflow: hidden; 
+
+}
+.container .card .imgBx,
+.container .card .contentBx
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.container .card .imgBx img
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+
+.container .card .contentBx::before
+{
+content: '';
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: #fff;
+transition: 0.5s;
+transform: scaleX(0);
+transition: transform 0.5s ease-in-out;
+transform-origin: right;
+transition-delay: 0.5s;
+}
+.container .card:hover .contentBx::before
+{
+    transform: scaleX(1);
+transition: transform 0.5s ease-in-out;
+transform-origin: left;
+transition-delay: 0s;
+
+
+}
+.container .card .contentBx
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card .contentBx .content{
+    position: relative;
+    padding: 30px;
+    z-index: 1;
+    transition: 0.5s;
+     transform:translateX(-300px);
+     transition-delay: 0s;
+}
+.container .card:hover .contentBx .content{
+    transform: translateX(0px);
+    transition-delay: 0.5s;
+
+}
+.container .card .contentBx .content h3{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: red;
+}
+.container .card .contentBx .content p{
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+
+.lining{
+    margin:20px;
+    padding: 0;
+    background: #333;
+}
+.Box{
+    max-width:760px;
+    margin: auto;
+    border: #fff solid 3px;
+    background: #fff;
+}
+
+.main-img img, 
+.imgs img{
+    width:100%;
+}
+.imgs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+/* Fade in animation */
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+.fade-in{
+    opacity: 0;
+    animation:fadeIn 0.5s ease-in 1 forwards;
+}
+h2{
+    text-align: center;
+    padding-top: 20px;
+    color: red;
+    font-weight:bold;
+}

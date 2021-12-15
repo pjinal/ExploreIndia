@@ -1,0 +1,931 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+span{
+    font-size:.9rem;
+    color: #757373;
+}
+
+h6{
+    font-size: 1.1rem;
+    color: rgb(24, 24, 49);
+}
+
+/* navigation */
+
+nav{
+    /*position: fixed;*/
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 10vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav img{
+    width: 200px;
+    cursor: pointer;
+
+}
+nav .Navigation{
+    display: flex;
+}
+
+#menu-btn{
+    width: 30px;
+    height: 35px;
+    display: none;
+}
+
+#menu-close{
+    display: none;
+}
+
+nav .Navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .Navigation ul li {
+    list-style: none;
+    margin-left: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 0.1em;
+  padding-bottom: -1em;
+  margin: 0 1em;
+}
+
+nav .Navigation ul li a {
+    text-decoration: none;
+    color :rgb(21, 21, 100);
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    
+}
+
+nav .Navigation ul li a.active,
+nav .Navigation ul li a:hover {
+    color: #FDC93B;
+}
+
+.dropdown {
+    opacity: 0;
+    position: absolute;
+     display: flex;
+    flex-direction: column;
+    margin: auto -60px;
+    width: 20%;
+    padding: 0.3em;
+    padding-top: 0.5em;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+nav .Navigation ul li:focus .dropdown,
+nav .Navigation ul li:focus-within .dropdown,
+nav .Navigation ul li:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0.3s;
+    
+}
+/*Responsive*/
+@media (max-width: 769px) {
+    nav{
+        padding: 15px 20px;
+      }
+    
+      nav img {
+          width: 130px;
+      }
+    
+      
+    #menu-btn{
+        display: initial;
+    }
+    
+    #menu-close{
+        display: initial;
+        font-size: 1.6rem;
+        color: white;
+        padding: 30px 0px 20px 20px;
+    }
+    
+    nav .Navigation ul {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: -220px;
+        height: 100vh;
+        width: 220px;
+        background: rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgb(255, 255, 255);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+    
+    nav .Navigation ul.active {
+        right:0;
+    }
+    
+    nav .Navigation ul li {
+        padding:20px 0px 20px 40px;
+        margin-left: 0;
+    }
+    
+    nav .Navigation ul li a{
+        color: white;
+    }
+    
+    
+    .dropdown {
+        opacity: 0;
+        position: absolute;
+         display: flex;
+        flex-direction: column;
+        margin: auto -60px;
+        width: 20%;
+        padding: 0.3em;
+        padding-top: 0.5em;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(248, 245, 245, 0.712);
+        transform: translateY(-2em);
+        z-index: -1;
+        transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    }
+    
+    nav .Navigation ul li:focus .dropdown,
+    nav .Navigation ul li:focus-within .dropdown,
+    nav .Navigation ul li:hover .dropdown {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(0);
+        transition-delay: 0s, 0s, 0.3s;
+        
+    }
+    #home {
+        padding-top: 0px;
+    }
+    
+    #home p{
+        width: 90%
+    }
+        
+    }
+
+ /*Main content*/
+section{
+    padding:2rem 9%;
+}
+
+
+
+.food{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5px;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.food .content{
+    flex: 1 1 40rem;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*font-size: 5rem;
+    color: cornflowerblue;*/
+}
+
+.food .content h3{
+    font-size: 2rem; 
+    color:rgb(9, 34, 34); 
+}
+
+.food .content p{
+    font-size: 1rem;
+    color: rgb(51, 57, 65);
+}
+
+.food .image{
+    flex: 1 1 30rem;
+    padding:20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.food .image img{
+    width:100%;
+    padding: 1rem;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3rem);
+    } 
+}
+
+.heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 3.0rem;
+    padding-left: 4rem;
+    padding-right:4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: rgb(80, 15, 15);
+}
+
+.speciality .box-container{
+display: flex;
+flex-wrap: wrap;
+gap:1.5rem;
+}
+
+.speciality .box-container .box{
+    flex: 1 0 25rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .7rem 1.2rem rgba(0, 0, 0, .1) ;
+    border: .05rem solid rgba(196, 190, 190, 0.76);
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.speciality .box-container .box .image{
+height: 100%;
+width: 100%;
+object-fit: cover;
+position: absolute;
+top: -100% ;left: 0;
+}
+
+.speciality .box-container .box .content{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background:#fff;
+    padding: 2rem;
+}
+
+.speciality .box-container .box .content h3{
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.speciality .box-container .box .content p{
+    font-size: 1rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.speciality .box-container .box:hover .image{
+    top:0;
+}
+
+.popular .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.popular .box-container .box{
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: 2rem;
+    text-align: center;
+    flex: 1 0 15rem;
+}
+.popular .box-container .box img{
+    height: 15rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.popular .box-container .box h4{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gallery .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.gallery .box-container .box{
+    height: 20rem;
+    flex: 1 1 20rem;
+    border: 1.5rem solid #fff;
+    box-shadow: 0 .5 1rem rgba(255, 255, 255, .9);
+    border-radius: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+    position:absolute;
+    top:-100%; left: 0;
+    height: 100%;
+    width:100%;
+    background: rgba(161, 148, 148, 0.712);
+    padding: 1.5rem;
+    padding-top: 7rem;
+    text-align: center;
+}
+
+.gallery .box-container .box:hover .content{
+    top:0;
+}
+
+
+
+.formSection{
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+position: relative;
+    box-sizing: border-box;
+                width: 100%;
+                border: 50px solid black;
+                justify-content: center;
+                font-weight: 20px;
+                align-content: center;
+                align-items: center;
+                background-color: white;
+                margin-bottom: 20px;
+                margin: 0 auto;
+                width: 600px;
+}
+/*End of Main content */
+
+
+/*Start of folkDance*/
+
+.folkdance{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 35px; 
+    justify-content: center;
+}
+
+.folkdance p{
+    text-align: center;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+/*#myVideo {
+    width: 75%;
+  height: auto;
+  margin-left: 210px;
+  margin-right: 50px;
+    opacity: 0.8;
+    margin-top: 20px;
+  } */
+
+  .video-wrap { 
+    position: relative; 
+    margin: 0 auto 10px;
+    max-width: 850px;
+    margin-top: 50px;
+} 
+
+/* Before Element */
+.video-wrap:before {
+    content: '';
+    display: block;
+    position: relative;
+    padding-bottom: 50.25%;
+}
+
+/* Video */
+.video-wrap iframe, 
+.video-wrap object, 
+.video-wrap embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.folkdance h1{
+  color: maroon;
+  font-weight: 100px;
+}
+
+.popular .paintingbullets{
+    list-style-type: circle;
+    text-align: left;
+
+}
+  
+  /* Add some content at the bottom of the video/page */
+  /*.contentplay {
+      display: flex;
+      flex-wrap: wrap;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 75%;
+    margin-left: 210px;
+    margin-right: 190px;
+    padding: 20px;
+  }
+  
+  .contentplay h1{
+      color: white;
+  }
+  */
+  
+ .colors .box-container .box .content p{
+    text-align: center;
+}
+
+.colors .heading {
+text-align: center;
+}
+
+.colors .heading p{
+    font-size: 20px;
+    color: black;
+}
+
+.colors .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    }
+
+.speciality p{
+    text-align: center;
+}
+        
+.popular p{
+    text-align: center;
+    padding: 10px;
+}
+
+.music p{
+    text-align: center;
+    padding: 10px;
+
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.music .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.music .slideshow-container .mySlides {
+  display: none;
+}
+
+
+.music .slideshow-container .mySlides img{
+    height: 550px;
+    border: 50px solid black;
+}
+
+/* Next & previous buttons */
+.music .slideshow-container .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.music .slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.music .slideshow-container .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.music .slideshow-container .mySlides .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  background-color: 5px black;
+}
+
+/* Number text (1/3 etc) */
+.music .slideshow-container .mySlides .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.music .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+/* Fading animation */
+.music .slideshow-container .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*End of folkdance content */
+
+
+/*Start of Festivals */
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .home .content{
+    text-align: center;
+  }
+  
+  .home .content h3{
+    font-size: 4.5rem;
+    color:#fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+  }
+  
+  .home .content p{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:.5rem 0;
+  }
+  
+  .home .video-container video{
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+  }
+  
+  .home .controls{
+    padding:1rem;
+    border-radius: 5rem;
+    background:rgba(0,0,0,.7);
+    position: relative;
+    top:10rem;
+  }
+  
+  .home .controls .vid-btn{
+    height:2rem;
+    width:2rem;
+    display: inline-block;
+    border-radius: 50%;
+    background:#fff;
+    cursor: pointer;
+    margin:0 .5rem;
+  }
+  
+  .home .controls .vid-btn.active{
+    background:var(--orange);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Festivals{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.Festivals img{
+    flex: 1 1 40rem;
+    width:70%;
+    height:80%;
+    justify-items: center;
+}
+
+.Festivals .FestivalsContent{
+    flex: 1 1 40rem;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+.Festivals .FestivalsContent h2{
+    font-size: 4rem; 
+    color:rgba(16, 88, 73, 0.877); 
+}
+
+.Festivals .FestivalsContent p{
+    font-size: 1rem;
+    color: rgb(51, 57, 65);
+}
+
+.popularFestivals{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.popularFestivals h1{
+    text-align: center;
+}
+
+.popularFestivals p{
+    font-size: 1rem;
+    text-align: center;
+    padding:20px;
+    color: rgb(51, 57, 65);
+}
+
+.popularFestivals .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    flex-direction: column;
+    }
+    
+    .popularFestivals .box-container .box{
+        flex: 1 0 20rem;
+        position: relative;
+        overflow: hidden;
+        gap:1.5rem;
+        box-shadow: 0 .7rem 1.2rem rgba(0, 0, 0, .1) ;
+        border: .05rem solid rgba(61, 59, 59, 0.76);
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+    
+    .popularFestivals .box-container .box .image{
+       position: relative;
+       margin:40px;
+       float: right;
+       width: 280px;
+       height:250px;
+       justify-content: center;
+       border:19px solid black;
+    }
+
+    .popularFestivals .box-container .box .image1{
+        position: relative;
+        margin:40px;
+        float: left;
+        width: 280px;
+        height:250px;
+        justify-content: center;
+        align-content: center;
+        border:19px solid black;
+     }
+    
+    .popularFestivals .box-container .box .content{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background:#fff;
+        padding: 2rem;
+    }
+    
+    .popularFestivals .box-container .box .content h3{
+        font-size: 1.5rem;
+        color: #333;
+    }
+    
+    .popularFestivals .box-container .box .content p{
+        font-size: 1rem;
+        color: #666;
+        padding: 1rem 0;
+    }
+
+/*End of festivals*/
+
+/*   Start of the Footer    */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+footer {
+    background-color: #17406c;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.footer-a {
+    font-family: 'Raleway',sans-serif;
+    text-decoration: none;
+    color: #eee;
+    font-size: small;
+}
+a:hover {
+    text-decoration: underline;
+    color: skyblue;
+}
+
+.footer-h2 {
+    color: #fff;
+    font-family: 'Raleway',sans-serif;
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+    text-decoration: underline;
+}
+
+/*  Social Media Icons  */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 60%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+/* stick footer at bottom       */
+/*body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}*/
+.container {
+    flex: 1;    /* same as flex-grow: 1; */
+}
+
+footer section {
+    display: flex;
+    flex-wrap: wrap;
+    /*margin: 10px 50px;*/
+    justify-content: center;
+}
+
+.footer-content {
+    padding: 1.25rem;
+    min-width: 12.5rem /*200px*/;
+}
+
+.footer-content-state {
+    padding: 1.25rem;
+    min-width: 29rem;
+}
+
+.state-footer {
+    min-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 180px;
+    flex-direction: column;
+    flex: 1 1 160px;
+    gap: 5px 10px;          /* row-gap column gap */
+}
+
+.footer-p {
+    font-weight: 600;
+    color: white;
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+    text-align: center;
+}
+
+/*   End of the Footer    */

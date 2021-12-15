@@ -1,0 +1,1020 @@
+/*  weather pages's css  */
+/*  Start of weather pages's css  */
+  main {
+    color: #000000;
+    background-color: white;
+   /* min-width: 800px;*/
+    max-width: 1224px;
+    margin: 0 auto;
+    /*min-height: 1800px;*/
+  }
+  
+  .main-div {
+    text-align: center;
+  }
+  
+  .main-h3 {
+    letter-spacing: 1.2px;
+    font-weight: bolder;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.72;
+  }
+  
+  .div-weather {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  main div section {
+    float: left;
+    margin: 20px;
+    box-shadow: 0 2px 17px 0 rgb(0 0 0 / 8%);
+    border-radius: 25px;
+    height: 500px;
+    padding-bottom: 10px !important;
+    width: 550px;
+  }
+  
+  main div section h2 {
+    font-weight: 500;
+    line-height: 6px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: capitalize;
+    color: #2c4058;
+    padding-bottom: 10px;
+  }
+  
+  main div section p {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    text-align: justify !important;
+    line-height: 1.72;
+    color: #8a8989;
+    margin: 0px 30px 30px 30px;
+  }
+  
+  main div section p span {
+    color: #464646;
+  }
+
+  main div section img {
+    height: 250px;
+    width: 450px;
+    border-radius: 25px;
+  }
+
+  .text-glow {
+    font-size: 60px;
+    color: rgb(10, 10, 10);
+    text-align: center;
+    animation: text-glow 1s ease-in-out infinite alternate;
+  }
+  
+  /*@-webkit-keyframes text-glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }*/
+
+  .rainbow {
+  
+    /* Font options */
+   font-family: 'Pacifico', cursive;
+   text-shadow: 2px 2px 4px #000000;
+   font-size: 60px;
+   
+    /* Chrome, Safari, Opera */
+   -webkit-animation: rainbow 5s infinite; 
+   
+   /* Internet Explorer */
+   -ms-animation: rainbow 5s infinite;
+   
+   /* Standar Syntax */
+   animation: rainbow 5s infinite; 
+ }
+ 
+ /* for browser */
+ @-webkit-keyframes rainbow{
+    0%{color: orange;}	
+   10%{color: purple;}	
+   20%{color: red;}
+   30%{color: CadetBlue;}
+   40%{color: yellow;}
+   50%{color: coral;}
+   60%{color: green;}
+   70%{color: cyan;}
+   80%{color: DeepPink;}
+   90%{color: DodgerBlue;}
+   100%{color: orange;}
+ }
+  
+  /* animation */
+  #div-animation {
+    margin-top: 10%;
+    height:350px;
+    width: 750px;
+    animation: weather 20s;
+    color: white;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes weather {
+    0% {background-image:url("../images/weather.jpg");}
+    10% {background-image:url("../images/weather1.jpg");}
+    20% {background-image:url("../images/weather2.jpg");}
+    30% {background-image:url("../images/weather4.jpg");}
+    40% {background-image:url("../images/weather5.jpg");}
+    50% {background-image:url("../images/weather6.jpg");}
+    60% {background-image:url("../images/weather7.jpg");}
+    70% {background-image:url("../images/weather8.jpg");}
+    80% {background-image:url("../images/weather9.jpg");}
+    90% {background-image:url("../images/weather10.png");}
+    100% {background-image:url("../images/weather11.jpg");}
+  }
+
+  .panel-h2 {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .btn-accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.4s;
+    margin-top: 20px;
+    background: #fdfdfd;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+  }
+  
+  #divFAQs .active, .btn-accordion:hover {
+    background-color: #ccc;
+  }
+  
+  #divFAQs .btn-accordion:after {
+    content: '\25BC';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  #divFAQs .active:after {
+    content: "\25B2";
+  }
+  
+  .div-panel {
+    margin: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .span-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: block;
+    background: rgba(26,115,232,1);
+    float: left;
+    text-align: left;
+    margin-right: 12px;
+  }
+
+  .span-panel {
+    color: #464646;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    float: left;
+    text-align: left;
+  }
+
+  .p-panel {
+    color: #464646;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    float: left;
+    text-align: left;
+    padding: 0px 10px;
+    margin-right: 10px;
+  }
+
+  main div section h3:hover {
+    background-color: #cccbcb;
+    font-weight: bold;
+  }
+
+  main div section p:hover {
+    font-weight: 540;
+    text-shadow: 0 0 3px #c2bfbf, 0 0 5px #d5d5fa;
+  }
+
+  @media (max-width: 800px) {
+  
+    #div-animation {
+        width: 80%;
+    }
+
+    main div section {
+        width: 300px;
+        height: auto;
+    }
+
+    main div section img {
+      height: 125px;
+      width: 210px;
+    }
+
+    main div section h2 {
+      line-height: 30px;
+    }
+
+    .btn-accordion {
+      margin: 20px 15px 0px 15px;
+      width: 90%;
+    }
+
+    .div-panel {
+      padding-left: 20px;
+      text-align: left;
+      float: left;
+    }
+
+    .panel-h2 {
+      text-align: left;
+      margin-left: 30px;
+    }
+  }
+
+  @media (max-width: 500px) {
+
+    .btn-accordion {
+      margin: 10px 10px 0px 10px;
+      width: 85%;
+      padding-left: 5px;
+      font-size: 16px;
+    }
+
+    .div-panel {
+      margin-left: 10px;
+    }
+  }
+  /* End of weather pages's css  */
+
+  /* Start of hotel pages's css  */
+
+  #div-hotel {
+    margin-top: 10%;
+    height: 300px;
+    width: 850px;
+  }
+
+  .div-hotel-h1 {
+    font-size: 50px;
+    color: white;
+  }
+
+  .searchBar{
+    float: left;
+    margin-left: 30px;
+  }
+
+  .search-text{
+    border: 0;
+    border-bottom: 1px solid gray;
+    padding-left: 0;
+    padding-bottom: 10px;
+    outline: none !important;
+    box-shadow: none !important;
+    font-size: 16px;
+  }
+
+  .btn-search {
+    border: 0;
+    background-color: transparent;
+    font-size: 10px;
+    padding-left: 0;
+    padding-right: 5px;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .btn-downArrow{
+    border: 0;
+    border-bottom: 1px solid gray;
+    width: 195px;
+    background-color: transparent;
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .fa-search {
+    font-size: 16px;
+  }
+
+  .downArrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    float: right; 
+  }
+
+  .btnHotel{
+    border: 0;
+    background-color: transparent;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .labelCheckbox{
+    padding: 10px;
+    font-size: 1.2em;
+    color: #5a5a5a;
+    font-family: 'Raleway',sans-serif;
+  }
+  
+  .chk-hotel{
+    height: 20px;
+    width: 20px;
+  }
+
+  .search-hotel-result {
+    font-size: 1.4em;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    color: #3a3a3a;
+    padding-bottom: 8px;
+    margin-left: 25px;
+  }
+
+  .section-hotel{
+    float: left;
+    margin: 20px;
+    box-shadow: 0 2px 17px 0 rgb(0 0 0 / 8%);
+    border-radius: 25px;
+    height: 520px;
+    padding-bottom: 10px !important;
+    width: 350px;
+  }
+
+  .section-hotel h2 {
+    font-weight: 500;
+    line-height: 6px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: capitalize;
+    color: #2c4058;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .section-hotel p {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    text-align: justify !important;
+    line-height: 1.72;
+    color: #8a8989;
+    margin: 0px 30px 30px 30px;
+    text-align: center;
+  }
+  
+  .section-hotel p span a:hover {
+    background-color: yellow;
+    font-size: 16px;
+    color: black;
+  }
+
+  .section-hotel p span {
+    color: #464646;
+  }
+
+  .section-hotel img {
+    height: 250px;
+    width: 300px;
+    border-radius: 25px;
+    margin: 0 22px;
+  }
+
+  .pRed{
+    background-color: rgb(250, 242, 127);
+    font-weight: 600;
+    color: white;
+    font-size: 10px;
+    float: right;
+  }
+
+  .pDark{
+    background-color: rgb(159, 240, 9);
+    font-size: 14px;
+    font-weight: 600;
+    margin:0px;
+  }
+
+  .star-checked {
+    color: darkorange;
+  }
+
+  .fa-star {
+    width: 8px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0px 10px;
+  }
+
+  .div-facility-details {
+    background: rgb(216 216 216 / .15);
+    padding: 30px;
+  }
+
+  .div-facility-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .div-facility-details ul {
+     padding: 0; 
+    list-style: none;
+  }
+
+  dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1 rem;
+  }
+
+  .div-facility-details ul li {
+    float: left;
+    padding-right: 40px;
+  }
+
+  .div-facility-details i {
+    margin-right: 10px;
+    margin-left: 10px ;
+  }
+
+  .div-facility-details span {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #575757;
+  }
+
+  i {
+    vertical-align: middle;
+    border-style: none;
+  }
+
+  .fas{
+    color: #0062cc;
+    font-size: 50px;
+  }
+
+  .div-facility-details .div-facility-list h4 {
+    color: #2c4059;
+    font-weight: 600;
+    padding-bottom: 0;
+}
+
+ul.other-details {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  line-height:2em;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.div-facility-details ul {
+  list-style: none;
+}
+
+.div-facility-details ul li {
+  float: left;
+  padding-right: 40px;
+  width: 235px;
+}
+
+.div-star{
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+
+  #div-hotel {
+    height: 160px;
+    width: 80%;
+  }
+
+  .div-hotel-h1 {
+    font-size: 40px;
+    color: white;
+  }
+
+  .imgHotel{
+    width: 90%;
+  }
+
+  .div-facility-details {
+    width: 350px;
+  }
+
+  .div-facility-details ul li {
+    float: left;
+    padding-right: 20px;
+    width: 250px;
+  }
+
+  .div-facility-details i {
+    margin-top:10px;
+  }
+
+  #divFacilityInfo {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .div-hotel-h1 {
+    font-size: 30px;
+    margin-top: 30px;
+    color: darkblue;
+  }
+}
+  /* End of hotel pages's css  */
+  
+  /* Start of Luxury pages's css  */
+  
+  .section-luxury{
+  float: left;
+  margin: 20px;
+  box-shadow: 0 2px 17px 0 rgb(0 0 0 / 8%);
+  border-radius: 25px;
+  height: 200px;
+  padding-bottom: 10px !important;
+  width: 250px;
+ }
+
+ .section-luxury img {
+  height: 150px;
+  width: 200px;
+  border-radius: 25px;
+  margin-left: 25px;
+}
+ 
+.section-luxury h1{
+  font-size: 20px;
+  text-align: center;
+  color: rgb(36, 35, 35);
+}
+
+.div-luxury {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field-set-class {
+  margin: 0 6rem;
+  border-style: solid;
+  border-color: rgb(85, 107, 5);
+  border-width: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0px 40px;
+}
+
+.form-H1{
+  font-weight: bolder;
+  color: darkblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:3rem;
+  margin-left: 10rem;
+  margin-bottom: 10px;
+}
+
+.div-luxury-h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.legend-class{
+  margin-left: 40px;
+  padding: 0 1rem;
+  color: white;
+  background-color: rgb(165, 197, 50);
+  font-weight: bolder;
+}
+
+#txtFName, #txtLName, #txtEmail {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.div-luxury .section-luxury h1:hover {
+  background-color: yellow;
+}
+
+#btnSubmit {
+  width: 300px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-left:60px;
+}
+
+#btnSubmit:hover {
+  background-color: #45a049;
+}
+
+#btnReset {
+  width: 300px;
+  background-color: #0306a8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btnReset:hover {
+  background-color: #446ef8;
+}
+
+.section-survey {
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.label-checkbox-luxury {
+  font-size: 16px;
+  padding: 5px 20px 5px 10px;
+  margin-right: 50px;
+  width: 185px;
+}
+
+.label-radio-season {
+  font-size: 16px;
+  padding:  5px 20px 5px 10px;
+  margin-right: 50px;
+  width: 100px;
+}
+
+.radio-season {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.chk-luxury{
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.div-checkbox-luxury {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 500px;
+}
+
+.div-radio-season {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 500px;
+}
+
+/* The Modal Div */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.error-message {
+  color: red;
+}
+
+.label-amount {
+  font-weight: bold;
+  color:green;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 800px) {
+
+  main {
+    width: auto;
+  }
+
+  .div-luxury {
+    margin-left: 80px;
+  }
+
+  .div-luxury-h1 {
+    font-size: 40px;
+    color: white;
+  }
+
+  #txtFName, #txtLName, #txtEmail {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  #frmSurvey {
+    width: auto;
+  }
+
+  .form-H1 {
+    margin-left: 30px;
+    font-size: 30px;
+  }
+
+  .section-survey{
+    width: auto;
+  }
+
+  #btnSubmit {
+    width: 200px;
+  }
+
+  #btnReset {
+    width: 200px;
+    margin-left: 60px;
+  }
+
+  .label-checkbox-luxury {
+    width: 150px;
+  }
+
+  label-radio-season {
+    width: 150px;
+  }
+
+  .div-checkbox-luxury {
+    width: 220px;
+  }
+
+  .div-radio-season {
+    width: 170px;
+  }
+
+  .section-luxury{
+    width: auto;
+    height: auto;
+   }
+  
+   .section-luxury img {
+    height: 100px;
+    width: 100px;
+  }
+   
+  .section-luxury h1{
+    font-size: 12px;
+    width: 150px;
+  }
+
+  .modal {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content {
+    left: 40%;
+    width: 20rem;
+    margin-left: 12%;
+  }
+
+  .label-amount {
+    white-space: pre;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .searchBar {
+    float: none;
+  }
+
+  .div-luxury {
+    margin-left: 0px;
+  }
+
+  #div-hotel {
+    margin-top: 90px;
+    width: 100%;
+  }
+
+  .div-luxury-h1 {
+    font-size: 28px;
+    margin-top: 80px;
+    color: darkblue;
+  }
+
+  #divFacilityInfo h2{
+    text-align: left;
+  }
+
+  #divFacilityInfo {  
+    margin: 0px;
+    padding-left: 20px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .div-facility-details span {
+    font-size: 14px;
+    margin-left: 2px;
+  }
+
+  .div-facility-details ul li {
+    padding: 10px 0px;
+  }
+
+  .imgHotel {
+    width: 100%;
+  }
+
+  .legend-class {
+   margin-left: 55px;
+  }
+
+  #txtFName, #txtLName {
+    width: 80%;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+
+  .chk-luxury{
+    margin: 10px 0px 0px 20px;
+  }
+
+  .label-checkbox-luxury {
+    width: 150px;
+  }
+
+  #rangeBudget {
+    margin-left: 18px;
+  }
+
+  /*footer {
+    width: 500px;
+  }*/
+
+  /*nav {
+    padding: 15px 20px;
+    width: 500px;
+  }*/
+
+  .field-set-class {
+     margin: 0px;
+     width: 320px;
+     padding: 0px;
+  }
+
+  .field-set-class label {
+    margin: 0px 0px 0px 20px;
+    float: left;
+  }
+
+  .error-message {
+    margin-left: 20px;
+    float: left;
+  }
+
+  .section-survey {
+    width: 350px;
+  }
+
+  .div-checkbox-luxury {
+    display: flex;
+    height: auto;
+  }
+
+  .div-radio-season {
+    display: flex;
+    height: auto;
+    width: 180px;
+  }
+
+  .radio-season {
+    margin-top: 12px;
+    margin-left: 30px;
+  }
+
+  /*.label-checkbox-luxury {
+    order: 2;
+    flex-basis: 200px;
+  }*/
+
+  #lblEmail {
+    width: 150px;
+  }
+
+  #txtEmail {
+    width: 81%;
+    margin-left: 20px;
+  }
+
+  ul.other-details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .div-facility-details ul li {
+    width: 100%;
+  }
+
+  #rangeAmount {
+    white-space: pre;
+    margin-left: 20px;
+  }
+
+  .section-luxury {
+    margin-left: 100px;
+  }
+
+  .modal-content {
+    margin-left: 8%;
+  }
+}
+  /* End of Luxury pages's css  */
